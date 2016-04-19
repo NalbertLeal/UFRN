@@ -7,9 +7,9 @@
 #include "stackar.h"
 
 template < class Data >
-void StackAr< Data >::enqueue(const Data & _x) {
+void StackAr< Data >::push(const Data & _x) {
   if(theTop == capacity) {
-    std::cout << ">>> The queue is full. Folding the capacity ...\n";
+    std::cout << ">>> The stack is full. Folding the capacity ...\n";
     capacity = 2 * capacity;
     Data *newStack = new int[capacity];
 
@@ -33,20 +33,20 @@ void StackAr< Data >::enqueue(const Data & _x) {
 }
 
 template < class Data >
-Data StackAr< Data >::dequeue() {
+Data StackAr< Data >::pop() {
   if(!isEmpty()) {
     Data elementTop = theStack[theTop-1];
     theTop--;
     return elementTop;
   }
   else {
-    std::cout << ">>> The queue is empty, so it's impossible to return the correct element.\n";
+    std::cout << ">>> The stack is empty, so it's impossible to return the correct element.\n";
     return 0;
   }
 }
 
 template < class Data >
-Data StackAr< Data >::getFront() const {
+Data StackAr< Data >::top() const {
   return theTop;
 }
 
@@ -61,7 +61,7 @@ bool StackAr< Data >::isEmpty() const {
 template < class Data >
 void StackAr< Data >::makeEmpty() {
   theTop = 0;
-  std::cout << ">>> Queue was cleaned.\n";
+  std::cout << ">>> Stack was cleaned.\n";
 }
 
 template < class Data >

@@ -1,3 +1,6 @@
+#ifndef _ABSQUEUE_H_
+#define _ABSQUEUE_H_
+
 #include <iostream>
 
 /* Class interface file (não pode ser instanciada!). */
@@ -19,3 +22,5 @@ class AbsQueue {
     // Disable copy constructor
     AbsQueue(const AbsQueue & ) { /* Empty */ }
 };
+
+#endif

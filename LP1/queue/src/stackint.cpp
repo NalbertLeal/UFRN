@@ -4,7 +4,7 @@
 #include <iostream>
 #include "stackint.h"
 
-void StackInt::enqueue(const int & _x) {
+void StackInt::push(const int & _x) {
   if(theTop == capacity) {
     std::cout << "The queue is full. Folding the capacity ...\n";
     capacity = 2 * capacity;
@@ -22,7 +22,7 @@ void StackInt::enqueue(const int & _x) {
 
 }
 
-int StackInt::dequeue() {
+int StackInt::pop() {
   if(!isEmpty()) {
     int elementTop = theQueue[theTop-1];
     theTop--;
@@ -35,7 +35,7 @@ int StackInt::dequeue() {
 
 }
 
-int StackInt::getFront() {
+int StackInt::top() {
   return theTop;
 }
 

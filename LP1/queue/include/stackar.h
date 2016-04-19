@@ -6,7 +6,7 @@
 #include "AbsStack.h"
 
 template < class Data >
-class StackAr : public AbsQueue < Data > {
+class StackAr : public AbsStack < Data > {
   public:
 
     StackAr(int tamanho = 50) {
@@ -19,9 +19,9 @@ class StackAr : public AbsQueue < Data > {
       delete [] theStack;
     }
 
-    void enqueue(const Data & _x);
-    Data dequeue();
-    Data getFront() const;
+    void push(const Data & _x);
+    Data pop();
+    Data top() const;
 
     bool isEmpty() const;
     void makeEmpty();

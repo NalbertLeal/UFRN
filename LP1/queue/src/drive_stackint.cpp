@@ -5,14 +5,14 @@
 void drive_stackint() {
   StackInt pilha(4);
 
-  pilha.enqueue(2);
-  pilha.enqueue(10);
-  pilha.enqueue(3);
-  pilha.enqueue(5);
+  pilha.push(2);
+  pilha.push(10);
+  pilha.push(3);
+  pilha.push(5);
 
-  pilha.enqueue(7);
+  pilha.push(7);
 
-  pilha.printQueue();
+  pilha.printStack();
 
   std::cout << "o ultimo adicionado e agora removido é: " << pilha.dequeue() << std::endl;
   std::cout << "o ultimo adicionado e agora removido é: " << pilha.dequeue() << std::endl;

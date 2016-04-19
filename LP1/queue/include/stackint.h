@@ -15,9 +15,10 @@ class StackInt{
       delete [] theQueue;
     }
 
-    void enqueue(const int & _x);
-    int dequeue();
-    int getFront();
+    void push(const int & _x);
+    int pop();
+    int top();
+
     bool isEmpty();
     void makeEmpty();
 
