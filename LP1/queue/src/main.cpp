@@ -4,13 +4,11 @@
 // #include "stackint.cpp"
 // #include "drive_stackint.cpp"
 
-#include "stackar.h"
-#include "drive_stackar.cpp"
+#include "QueueAr.h"
+#include "drive_queuear.cpp"
 
 main() {
   drive_stackar();
-
-  std::cout << "/* message */" << std::endl;
 
   return EXIT_SUCCESS;
 }
