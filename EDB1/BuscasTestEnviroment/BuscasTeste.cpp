@@ -33,7 +33,7 @@ void randomFill( vector<long int> &V, const int lower, const int upper, const un
     }
 }
 
-main() {
+main(int argc, char* argv[]) {
   int numeroDoAlgoritimo, numeroDeTesteFeitos, k;
   long int potenciaDoVector, elem, tamanhoDoVector;
   double media = 0, nsecods;
